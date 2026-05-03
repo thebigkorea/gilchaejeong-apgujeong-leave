@@ -35,11 +35,11 @@ function clearLoading(id) {
 }
 
 function goAdmin() {
-  window.location.href = "./admin.html?v=2";
+  window.location.href = "./admin.html?v=4";
 }
 
 function goHome() {
-  window.location.href = "./index.html?v=2";
+  window.location.href = "./index.html?v=4";
 }
 
 function showTab(id, btn) {
@@ -84,7 +84,6 @@ async function submitLeave() {
     endDate.value = "";
     usedDays.value = "";
     reason.value = "";
-
   } catch (e) {
     alert(e.message);
   } finally {
@@ -110,7 +109,6 @@ async function registerEmployee() {
     regPhone.value = "";
     joinDate.value = "";
     baseLeave.value = "15";
-
   } catch (e) {
     alert(e.message);
   } finally {
@@ -145,7 +143,6 @@ async function loadMyHistory() {
         </div>
       `;
     });
-
   } catch (e) {
     alert(e.message);
   } finally {
@@ -171,7 +168,6 @@ async function checkBalance() {
         <div><strong>잔여연차: ${item.remainLeave}일</strong></div>
       </div>
     `;
-
   } catch (e) {
     alert(e.message);
   } finally {
@@ -215,7 +211,6 @@ async function loadAdminList() {
         </div>
       `;
     });
-
   } catch (e) {
     alert(e.message);
   } finally {
@@ -233,12 +228,11 @@ async function changeStatus(rowNumber, status) {
 
     alert(msg || "처리되었습니다.");
     loadAdminList();
-
   } catch (e) {
     alert(e.message);
   }
 }
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js?v=2");
+  navigator.serviceWorker.register("service-worker.js?v=4");
 }

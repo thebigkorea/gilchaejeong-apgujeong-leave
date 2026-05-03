@@ -1,44 +1,37 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>길채정 압구정 관리자 승인</title>
-
-<link rel="stylesheet" href="style.css"/>
-<meta name="theme-color" content="#7b1e1e"/>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>길채정 압구정 관리자 승인</title>
+  <link rel="stylesheet" href="style.css?v=4" />
+  <meta name="theme-color" content="#7b1e1e" />
 </head>
 
 <body>
-
 <main class="app">
 
-<section class="hero admin">
-<div class="brand">길채정 압구정점</div>
-<h1>관리자 승인</h1>
-<p>연월차 신청 승인 / 반려</p>
-</section>
+  <section class="hero admin">
+    <div class="brand">길채정 압구정점</div>
+    <h1>관리자 승인</h1>
+    <p>연월차 신청 승인 / 반려</p>
+  </section>
 
-<section class="card">
+  <section class="card">
+    <label>관리자 비밀번호</label>
+    <input id="adminPw" type="password" placeholder="비밀번호 입력" />
 
-<label>관리자 비밀번호</label>
-<input id="adminPw" type="password"/>
+    <button id="adminBtn" class="primary" onclick="loadAdminList()">신청 목록 불러오기</button>
 
-<button id="adminBtn" class="primary" onclick="loadAdminList()">신청 목록 불러오기</button>
+    <div id="adminResult" class="result"></div>
+  </section>
 
-<div id="adminResult"></div>
-
-</section>
-
-<section class="footer-link">
-<button class="admin-go-btn" onclick="goHome()">직원 신청 페이지</button>
-</section>
+  <section class="page-link-wrap">
+    <button class="page-link-btn home-link" onclick="goHome()">직원 신청 페이지</button>
+  </section>
 
 </main>
 
-<script src="script.js?v=1"></script>
-
+<script src="script.js?v=4"></script>
 </body>
 </html>
