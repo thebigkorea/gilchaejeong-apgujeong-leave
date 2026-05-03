@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>압구정 길채정 연월차 신청</title>
+
+<link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="style.css" />
+<meta name="theme-color" content="#7b1e1e" />
+
+</head>
+
+<body>
+
+<main class="app">
+
+<section class="hero">
+<div class="brand">길채정 압구정점</div>
+<h1>연월차 신청</h1>
+<p>길채정 압구정 직원용</p>
+</section>
+
+<section class="tabs">
+<button class="tab active" onclick="showTab('apply',this)">신청</button>
+<button class="tab" onclick="showTab('register',this)">직원등록</button>
+<button class="tab" onclick="showTab('history',this)">내역조회</button>
+<button class="tab" onclick="showTab('balance',this)">잔여확인</button>
+</section>
+
+<section id="apply" class="card">
+
+<label>매장</label>
+<div class="fixed-store">길채정 압구정점</div>
+
+<label>이름</label>
+<input id="applyName"/>
+
+<label>연락처</label>
+<input id="applyPhone"/>
+
+<label>휴가 종류</label>
+<select id="leaveType" onchange="autoUsedDays()">
+<option value="">선택하세요</option>
+<option>연차</option>
+<option>오전 반차</option>
+<option>오후 반차</option>
+<option>월차</option>
+<option>병가</option>
+<option>기타</option>
+</select>
+
+<label>시작일</label>
+<input type="date" id="startDate"/>
+
+<label>종료일</label>
+<input type="date" id="endDate"/>
+
+<label>사용일수</label>
+<input id="usedDays" type="number" step="0.5"/>
+
+<label>사유</label>
+<textarea id="reason"></textarea>
+
+<button id="submitBtn" class="primary" onclick="submitLeave()">신청하기</button>
+
+</section>
+
+<section id="register" class="card hidden">
+
+<label>매장</label>
+<div class="fixed-store">길채정 압구정점</div>
+
+<label>이름</label>
+<input id="regName"/>
+
+<label>연락처</label>
+<input id="regPhone"/>
+
+<label>입사일</label>
+<input type="date" id="joinDate"/>
+
+<label>기본연차</label>
+<input id="baseLeave" value="15"/>
+
+<button id="regBtn" class="primary" onclick="registerEmployee()">직원등록</button>
+
+</section>
+
+<section id="history" class="card hidden">
+
+<label>이름</label>
+<input id="historyName"/>
+
+<label>연락처</label>
+<input id="historyPhone"/>
+
+<button id="historyBtn" class="primary" onclick="loadMyHistory()">조회</button>
+
+<div id="historyResult"></div>
+
+</section>
+
+<section id="balance" class="card hidden">
+
+<label>이름</label>
+<input id="balanceName"/>
+
+<label>연락처</label>
+<input id="balancePhone"/>
+
+<button id="balanceBtn" class="primary" onclick="checkBalance()">잔여연차 확인</button>
+
+<div id="balanceResult"></div>
+
+</section>
+
+<section class="footer-link">
+<button class="admin-go-btn" onclick="goAdmin()">관리자 승인 페이지</button>
+</section>
+
+</main>
+
+<script src="script.js?v=1"></script>
+
+</body>
+</html>
