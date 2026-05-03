@@ -86,3 +86,13 @@ border:none;
 color:#8d1f1f;
 font-weight:900;
 }
+.primary.loading {
+  background: #555;
+  box-shadow: 0 7px 0 #333;
+  pointer-events: none;
+  opacity: .85;
+}
+
+.primary:disabled {
+  opacity: .85;
+}
